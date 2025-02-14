@@ -1,5 +1,5 @@
-ENV APP_VERSION="1.2"
 FROM ubuntu:latest
+ENV APP_VERSION="1.2"
 ADD http://fileserver.mycompany.com/releases/${APP_VERSION}/spring-boot-application.jar .
 ADD src/ .
 RUN apt update -y && apt upgrade -y
