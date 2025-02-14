@@ -4,7 +4,7 @@ ADD http://fileserver.mycompany.com/releases/${APP_VERSION}/spring-boot-applicat
 ADD src/ .
 RUN apt update -y && apt upgrade -y
 RUN apt install gcc ca-certificates-java openjdk-8-jdk sudo libboost-dev libc6-dev wget unzip make g++ curl openssh-server
-RUN wget src/ http://admin:SuperSecretPass@nexus.mycompany.com/repository/sampledeb.deb
+RUN wget http://admin:SuperSecretPass@nexus.mycompany.com/repository/sampledeb.deb
 RUN apt install ./sampledeb.deb
 USER 0
 EXPOSE 8080
