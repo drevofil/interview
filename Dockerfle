@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 ENV APP_VERSION="1.2"
 ADD src /app
-ADD http://fileserver.mycompany.com/releases/${APP_VERSION}/spring-boot-application.jar /app/deps
+ADD http://fileserver.mycompany.com/releases/${APP_VERSION}/private-lib.jar /app/deps
 WORKDIR /app
 RUN apt update -y && apt upgrade -y
 RUN apt install -y gcc ca-certificates-java openjdk-8-jdk sudo libboost-dev libc6-dev wget unzip make g++ curl openssh-server
